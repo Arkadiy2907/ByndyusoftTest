@@ -1,29 +1,30 @@
 const form = document.querySelector('.searchMin__form');
-const inputNum = document.querySelector('.searchMin__form_inputNum');
-const btn = document.querySelector('.btn');
+const inputNum = form.querySelector('.searchMin__form_inputNum');
+const btn = form.querySelector('.btn');
+const inputNumBigArr = document.getElementById('inputNum_bigArr');
+const btnBigArr = form.querySelector('.btn_bigArr');
 const versionOne = document.querySelector('.result__versionOne p span');
 const versionTwo = document.querySelector('.result__versionTwo p span');
 const versionOneTime = document.querySelector('.result__versionOne p b');
 const versionTwoTime = document.querySelector('.result__versionTwo p b');
 
-
 //Test:============================================================
-// test1 big array=============================
-
-//  const str = rundomItemStr();
-
-//test2 input item=============================
 
 // const str = '4, 0, 3, 19, 492, -10, 1'
 //  const str = '5, jb, 56jkj, 77';
 //  const str = 's5, jb, d56jkj, s77';
 
-//test3 no items in str========================
-
-// const str = ''; 
+// const str = '';
 // const str = ' ';
 
-//===================================================================
+//==================================================================
+
+btnBigArr.addEventListener("click", () => {
+	inputNum.value = '';
+	str = rundomItemStr(); 
+	findMinVersionTwoFor(str);
+	findMinVersionOneSort(str);
+});
 
 btn.addEventListener("click", () => {
 	str = inputNum.value; // <= change for test
@@ -44,10 +45,12 @@ inputNum.addEventListener("keydown", function (e) {
 
 function rundomItemStr() {
 	const bigArr = [];
-	for (let x = 1; x <= 1000000; x++) {
+	for (let x = 1; x <= inputNumBigArr.value; x++) {
 		bigArr.push(`${Math.floor(Math.random() * (1000000))}`);
 	};
-
+	// console.log(bigArr);
+	// bigArr.forEach(el => inputNum.value = `${el}`)
+	inputNum.value = `${bigArr}`;
 	return bigArr.join(',');
 };
 
@@ -66,7 +69,7 @@ function findMinVersionOneSort(str) {
 
 		let end = Date.now();
 
-		versionOneTime.textContent = `${end - start}`;
+		versionOneTime.textContent = `${(end - start) / 1000} секунд`;
 		versionOne.textContent = `${sum}`;
 
 	} else versionOne.textContent = 'error array';
@@ -102,7 +105,7 @@ function findMinVersionTwoFor(str) {
 		};
 
 		let end = Date.now();
-		versionTwoTime.textContent = `${end - start}`;		
+		versionTwoTime.textContent = `${(end - start) / 1000} секунд`;		
 		versionTwo.textContent = `${min1 + min2}`;
 
 	} else versionTwo.textContent = 'error array';
