@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "jest": "^28.1.1"
+  },
+  "name": "byndyusofttest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "Тестовое задание",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arkadiy2907/ByndyusoftTest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Arkadiy2907/ByndyusoftTest/issues"
+  },
+  "homepage": "https://github.com/Arkadiy2907/ByndyusoftTest#readme"
+}
