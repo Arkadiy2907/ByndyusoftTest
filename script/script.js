@@ -48,13 +48,13 @@ function rundomItemStr() {
 	for (let x = 1; x <= inputNumBigArr.value; x++) {
 		bigArr.push(`${Math.floor(Math.random() * (1000000))}`);
 	};
-	// console.log(bigArr);
-	// bigArr.forEach(el => inputNum.value = `${el}`)
+	
 	inputNum.value = `${bigArr}`;
 	return bigArr.join(',');
 };
 
 //versionOne sort===============================
+
 function findMinVersionOneSort(str) {
 	let array = checkInput(str);
 
@@ -134,6 +134,6 @@ function checkArr(array) {
 
 	if (array == undefined) {
 		return finish = false;
-	} else if ((array.length === 1 && Object.is(parseFloat(array[0]), NaN)) || array.length === 0) return finish = false;
+	} else if ((array.length === 1 && Object.is(parseFloat(array[0]), NaN)) || array.length === 0) finish = false;
 	return finish;
 };
