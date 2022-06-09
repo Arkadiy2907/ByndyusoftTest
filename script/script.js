@@ -79,7 +79,7 @@ function findMinVersionOneSort(str) {
 
 function findMinVersionTwoFor(str) {
 	let array = checkInput(str);
-
+	
 	if (checkArr(array)) {
 		if (array.length === 1) {
 			versionTwo.textContent = `${parseFloat(array[0])}`;
