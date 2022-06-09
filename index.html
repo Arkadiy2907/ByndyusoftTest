@@ -12,21 +12,28 @@
 <body>
 	<div class="wrap">
 		<div class="main">
+			<h2>Поиск двух минимальных значений в массиве</h2>
 			<section class="searchMin">
 				<form class="searchMin__form" action="#">
-					<input type="text" name="inputNum" class="searchMin__form_inputNum"
-						placeholder="введите числа через запятую" value=''/>
-					<button type="button" class="btn">Найти сумму двух минимумов</button>
+					<textarea type="text" name="inputNum" class="searchMin__form_inputNum"
+						placeholder="введите числа через запятую" value=''></textarea>
+					<button type="button" class="button btn_clear" onclick="form.querySelector('.searchMin__form_inputNum').value = '';">Очистка поля ввода</button>
+					<label for="inputNum_bigArr">введите длинну массива и сгенерируйте его
+						<input type="range" min="0" max="1000000" step="1000" name="inputNum_bigArr" id="inputNum_bigArr" value="0" onchange="document.getElementById('inputNum_bigArr_value').innerHTML = this.value;">
+						<output for="inputNum_bigArr" name="level">&nbsp;<span id="inputNum_bigArr_value"></span></output>
+					</label>
+					<button type="button" class="button btn_bigArr">Сгенерировать произвольный массив с результатом</button>
+					<button type="button" class="button btn">Найти сумму двух минимумов по введенным в поле ввода</button>
 				</form>
 			</section>
 			<section class="result">
 				<div class="result__versionOne">
 					<p>Использовался sort, c результатом: <span></span></p>
-					<p>время работы функции: <b></b> миллисекунд</p>
+					<p>время работы функции: <b></b></p>
 				</div>
 				<div class="result__versionTwo">
 					<p>Использовался for, c результатом: <span></span></p>
-					<p>время работы функции: <b></b> миллисекунд</p>
+					<p>время работы функции: <b></b></p>
 				</div>
 			</section>
 		</div>

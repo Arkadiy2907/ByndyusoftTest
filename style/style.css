@@ -17,26 +17,58 @@
 	align-items: flex-start;
 	margin: 5px;
 	padding: 5px;
+	max-width: 25rem;
 }
 
 .searchMin {
 	margin-bottom: 10px;
+	max-width: 100%;
+	width: 100%;
 }
 
 .searchMin__form {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+}
+
+.searchMin__form label {
+	display: flex;
+	flex-direction: column;
+	border-top: 1px solid gray;
 }
 
 .searchMin__form_inputNum {
 	min-height: 4rem;
-    width: 20rem;
+    width: 100%;
     padding-left: 12px;
     margin-bottom: 10px;
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+form .btn_bigArr {
+	margin-bottom: 25px;
 }
 
 .result div {
 	padding: 5px;
 	border-bottom: 1px solid gray;
+}
+
+label, h2 {
+	margin-bottom: 10px;
+} 
+
+.button {
+	margin-bottom: 15px;
+} 
+
+.result {
+	border-top: 1px solid gray;
+	max-width: 100%;
+	width: 100%;
+	overflow-x: auto;
 }
