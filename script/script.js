@@ -27,6 +27,7 @@ btnBigArr.addEventListener("click", () => {
 });
 
 btn.addEventListener("click", () => {
+	testBtn();
 	str = inputNum.value; // <= change for test
 	findMinVersionTwoFor(str);
 	findMinVersionOneSort(str);
@@ -35,6 +36,7 @@ btn.addEventListener("click", () => {
 inputNum.addEventListener("keydown", function (e) {	
 	if (e.key === "Enter") {
 		e.preventDefault();
+		testBtn();
 		str = inputNum.value; // <= change for test
 		findMinVersionTwoFor(str);
 		findMinVersionOneSort(str);		
@@ -52,6 +54,13 @@ function rundomItemStr() {
 	inputNum.value = `${bigArr}`;
 	return bigArr.join(',');
 };
+
+//for test btn=====================================
+
+function testBtn() {
+	btn.classList.add('light');
+	setTimeout((() => btn.classList.remove('light')), 1000);
+}
 
 //versionOne sort===============================
 

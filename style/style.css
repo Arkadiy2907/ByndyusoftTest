@@ -72,3 +72,7 @@ label, h2 {
 	width: 100%;
 	overflow-x: auto;
 }
+
+.light {
+	background-color: cadetblue;
+}
